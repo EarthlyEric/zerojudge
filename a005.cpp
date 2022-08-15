@@ -1,13 +1,19 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main(){
-    int i,x[4];
-    cin>>i;
-    for (int r=0;r<+i;r++){
-        for(int s=0;s<4;s++){
-            cin>>x[s];
-            cout<<x[s]<<"";
+    int i[4];
+    int time;
+    cin >> time;
+    while (time--)
+    {
+        cin >> i[0] >> i[1] >> i[2] >> i[3];
+        if(i[3]-i[2]==i[2]-i[1]){
+            i[4] = i[3] + (i[3] - i[2]);
+        }else{
+            i[4] = (i[1] / i[0]) * i[3];
         }
+        cout << i[0] <<" "<< i[1] <<" " << i[2] <<" " << i[3] <<" " << i[4];
     }
+    
 }
